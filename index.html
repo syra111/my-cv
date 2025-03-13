@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .cv-container {
+            width: 800px;
+            height: 1100px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            overflow: hidden;
+        }
+        .left-panel {
+            width: 35%;
+            background: #1c6758;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .left-panel img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            object-position: top;
+        }
+
+        .section {
+            margin-top: 25px;
+            padding: 20px;
+            background: #144d43;
+            border-radius: 5px;
+        }
+        .section h3 {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .section p {
+            font-size: 14px;
+        }
+        .right-panel {
+            width: 65%;
+            padding: 50px;
+        }
+        .right-panel h1 {
+            font-size: 28px;
+            color: #1c6758;
+        }
+        .right-panel h2 {
+            font-size: 18px;
+            color: gray;
+        }
+        .bio {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .work-experience, .skills, .education {
+            margin-top: 40px;
+        }
+        .work-experience h3, .skills h3, .education h3 {
+            font-size: 18px;
+            color: #1c6758;
+            border-bottom: 2px solid #1c6758;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .work-experience ul li, .skills ul li {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skills ul li {
+            background: #1c6758;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .skills ul li:hover {
+            background: #0f4c3a;
+        }
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                width: 90%;
+                height: auto;
+            }
+            .left-panel, .right-panel {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="left-panel">
+            <img src="profile.png" alt="Profile Image">
+            <h2>Saira Noreen</h2>
+            <p>Mern Stack Developer</p>
+            <div class="section contact-info">
+                <h3>Contact</h3>
+                <p>+92 300000000</p>
+                <p>sairanoreen@gmail.com</p>
+                <p>Bhera</p>
+            </div>
+            <div class="section languages">
+                <h3>Languages</h3>
+                <p>English </p>
+                <p>Urdu</p>
+            </div>
+            <div class="section award">
+                <h3>Soft Skills</h3>
+                <p>Problem-Solving</p>
+                <p>Communication Skills</p>
+                <p>Adaptability</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h1>Saira Noreen</h1>
+            <h2>Mern Stack Developer</h2>
+            <p class="bio">I am a dedicated Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js) with a strong foundation in JavaScript.  I have a keen interest to learn DevOps, to build scalable and efficient applications. With hands-on experience developing projects like AuctionHub (AI-powered auction platform), I am always eager to learn, solve complex problems, and work on innovative solutions.</p>
+            <div class="education">
+                <h3>Education</h3>
+                <p><strong>Superior College, Bhera</strong> (2019 - 2021)</p>
+                <p>FSC Pre-Engineering</p>
+                <p><strong>University of Sargodha</strong> (2021 - 2025)</p>
+                <p>Bachelors of Computer Science</p>
+            </div>
+            <div class="work-experience">
+                <h3>Personal Projects</h3>
+                <ul>
+                    <li><strong>Smart AI-powered AuctionHub</strong>Smart AI powered auction platform that enable real time bidding, price prediction using ML and automated bid strategies</li>
+                    <li><strong>Real-Time Chat App - </strong>Live messaging with WebSockets and JWT authentication</li>
+                    <li><strong>Job Finder Application - </strong>CRUD operations with authentication with searching functionalities</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Web Development: MERN Stack</li>
+                    <li>Programming Languages: C++, Java</li>
+                    <li>Database Management: MongoDB, SQL (Basic)
+                    </li>
+                    <li>Version Control: Git, GitHub</li>
+                    <li>DevOps & Cloud: Linux, AWS (Basic)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
