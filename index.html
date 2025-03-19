@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>Saira Noreen</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -22,7 +22,6 @@
         }
         .cv-container {
             width: 800px;
-            height: 1100px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -42,9 +41,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 25px;
-            object-position: top;
         }
-
         .section {
             margin-top: 25px;
             padding: 20px;
@@ -55,10 +52,9 @@
             border-bottom: 2px solid white;
             padding-bottom: 5px;
             margin-bottom: 15px;
+            border-radius: 5px;
+
             font-size: 16px;
-        }
-        .section p {
-            font-size: 14px;
         }
         .right-panel {
             width: 65%;
@@ -71,37 +67,35 @@
         .right-panel h2 {
             font-size: 18px;
             color: gray;
+
         }
+        .right-panel h3 {
+            background: #1c6758;
+            width: fit-content;    
+            color: white;         
+           border-radius: 5px;
+           padding: 6px;
+
+            
+        }
+       
+       
+       
         .bio {
             font-size: 14px;
             margin-top: 15px;
         }
-        .work-experience, .skills, .education {
-            margin-top: 40px;
-        }
-        .work-experience h3, .skills h3, .education h3 {
-            font-size: 18px;
-            color: #1c6758;
-            border-bottom: 2px solid #1c6758;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .work-experience ul li, .skills ul li {
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+       
         .skills ul li {
             background: #1c6758;
             color: white;
             padding: 10px 15px;
+            margin-top: 5px;
             border-radius: 5px;
             transition: 0.3s;
+        }
+        .education, .work-experience, .projects {
+            margin-top: 10px;
         }
         .skills ul li:hover {
             background: #0f4c3a;
@@ -120,57 +114,102 @@
     </style>
 </head>
 <body>
-    <div class="cv-container">
+    <div class="cv-container" itemscope itemtype="https://schema.org/Person">
         <div class="left-panel">
-            <img src="profile.png" alt="Profile Image">
-            <h2>Saira Noreen</h2>
-            <p>Mern Stack Developer</p>
+            <img src="profile.png" alt="Profile Image" itemprop="image">
+            <h2 itemprop="name">Saira Noreen</h2>
+            <p itemprop="jobTitle">MERN Stack Developer</p>
+            
             <div class="section contact-info">
                 <h3>Contact</h3>
-                <p>+92 300000000</p>
-                <p>sairanoreen@gmail.com</p>
-                <p>Bhera</p>
+                <p itemprop="telephone">+92 3167906568</p>
+                <p itemprop="email">sairanoreen@gmail.com</p>
+                <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <span itemprop="addressLocality">Naseera Baad, Bhera</span>
+                </p>
             </div>
+            
+            <div class="section skills">
+                <h3>Soft Skills</h3>
+                <p itemprop="skills">Problem-Solving</p>
+                <p itemprop="skills">Communication Skills</p>
+                <p itemprop="skills">Adaptability</p>
+            </div>
+
+            <div class="section achievements">
+                <h3>Achievements</h3>
+                <p itemprop="award">Built Multiple Web Projects</p>
+                <p itemprop="award">Developed AI-powered AuctionHub</p>
+                <p itemprop="award">Completed Internship as Backend Developer</p>
+            </div>
+
+            <div class="section hobbies">
+                <h3>Hobbies</h3>
+                <p>Reading Tech Blogs</p>
+                <p>Reading Geography & History Books</p>
+            </div>
+
             <div class="section languages">
                 <h3>Languages</h3>
-                <p>English </p>
-                <p>Urdu</p>
-            </div>
-            <div class="section award">
-                <h3>Soft Skills</h3>
-                <p>Problem-Solving</p>
-                <p>Communication Skills</p>
-                <p>Adaptability</p>
+                <p itemprop="knowsLanguage">English</p>
+                <p itemprop="knowsLanguage">Urdu</p>
             </div>
         </div>
+
         <div class="right-panel">
-            <h1>Saira Noreen</h1>
-            <h2>Mern Stack Developer</h2>
-            <p class="bio">I am a dedicated Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js) with a strong foundation in JavaScript.  I have a keen interest to learn DevOps, to build scalable and efficient applications. With hands-on experience developing projects like AuctionHub (AI-powered auction platform), I am always eager to learn, solve complex problems, and work on innovative solutions.</p>
+            <h3><strong>About Me</strong></h3>
+            <p class="bio" itemprop="description">
+                I am a dedicated Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js) with a strong foundation in JavaScript. With hands-on experience developing projects like AuctionHub (AI-powered auction platform), I am always eager to learn, solve complex problems, and work on innovative solutions.
+            </p>
+
             <div class="education">
-                <h3>Education</h3>
-                <p><strong>Superior College, Bhera</strong> (2019 - 2021)</p>
-                <p>FSC Pre-Engineering</p>
-                <p><strong>University of Sargodha</strong> (2021 - 2025)</p>
-                <p>Bachelors of Computer Science</p>
+                <h3><strong>Education</strong></h3>
+                <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <p><strong itemprop="name">Superior College, Bhera</strong> (2019 - 2021)</p>
+                    <p>FSC Pre-Engineering</p>
+                </div>
+                <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <p><strong itemprop="name">University of Sargodha</strong> (2021 - 2025)</p>
+                    <p>Bachelors of Computer Science</p>
+                </div>
             </div>
+
             <div class="work-experience">
-                <h3>Personal Projects</h3>
+                <h3> <strong>Work Experience</strong></h3>
+                <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                    <p><strong itemprop="name">DeveloperHub.co</strong> - Backend Developer (Intern)</p>
+                    <p itemprop="description">Developed an e-commerce application with advanced functionalities.</p>
+                    <meta itemprop="startDate" content="2024-10">
+                    <meta itemprop="endDate" content="2025-01">
+                </div>
+            </div>
+
+            <div class="projects">
+                <h3><strong>Personal Projects</strong></h3>
                 <ul>
-                    <li><strong>Smart AI-powered AuctionHub</strong>Smart AI powered auction platform that enable real time bidding, price prediction using ML and automated bid strategies</li>
-                    <li><strong>Real-Time Chat App - </strong>Live messaging with WebSockets and JWT authentication</li>
-                    <li><strong>Job Finder Application - </strong>CRUD operations with authentication with searching functionalities</li>
+                    <li itemprop="worksFor" itemscope itemtype="https://schema.org/CreativeWork">
+                        <strong itemprop="name">Smart AI-powered AuctionHub</strong> - 
+                        <span itemprop="description">AI-powered auction platform enabling real-time bidding & price prediction.</span>
+                    </li>
+                    <li itemprop="worksFor" itemscope itemtype="https://schema.org/CreativeWork">
+                        <strong itemprop="name">Real-Time Chat App</strong> - 
+                        <span itemprop="description">Live messaging with WebSockets and JWT authentication.</span>
+                    </li>
+                    <li itemprop="worksFor" itemscope itemtype="https://schema.org/CreativeWork">
+                        <strong itemprop="name">Job Finder Application</strong> - 
+                        <span itemprop="description">CRUD operations with authentication and search functionalities.</span>
+                    </li>
                 </ul>
             </div>
+
             <div class="skills">
-                <h3>Skills</h3>
+                <h3><strong>Skills</strong></h3>
                 <ul>
-                    <li>Web Development: MERN Stack</li>
-                    <li>Programming Languages: C++, Java</li>
-                    <li>Database Management: MongoDB, SQL (Basic)
-                    </li>
-                    <li>Version Control: Git, GitHub</li>
-                    <li>DevOps & Cloud: Linux, AWS (Basic)</li>
+                    <li itemprop="skills">Web Development: MERN Stack</li>
+                    <li itemprop="skills">Programming Languages: C++</li>
+                    <li itemprop="skills">Database Management: MongoDB, SQL (Basic)</li>
+                    <li itemprop="skills">Version Control: Git, GitHub</li>
+                    <li itemprop="skills">DevOps & Cloud: Linux, AWS (Basic)</li>
                 </ul>
             </div>
         </div>
